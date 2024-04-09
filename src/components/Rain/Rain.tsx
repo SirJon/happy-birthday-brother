@@ -11,7 +11,7 @@ const Rain = () => {
   const imgs = [img1, img2, img3, img4, img5, img6];
   return (
     <div className="Rain">
-      {new Array(50).fill(null).map((it, i) => {
+      {new Array(50).fill(null).map((_it, i) => {
         const left = getRandomNumber(0, 120);
         const width = getRandomNumber(30, 70);
         const animationDelay = getRandomNumber(1, 14);
