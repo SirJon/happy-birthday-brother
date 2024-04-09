@@ -11,58 +11,20 @@
     position: absolute;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    &--1 {
-      width: 100px;
-      animation-name: keyframes--1, rotate;
-      top: 5vh;
-      left: 30vw;
-      animation-duration: 6s;
-    }
-    &--2 {
-      animation-name: keyframes--2, rotate;
-      top: 40vh;
-      left: 5vw;
-      width: 150px;
-      animation-duration: 5s;
-    }
-    &--3 {
-      width: 70px;
-      animation-name: keyframes--3, rotate;
-      top: 20vh;
-      left: 70vw;
-      animation-duration: 10s;
-    }
-    &--4 {
-      width: 70px;
-      animation-name: keyframes--4, rotate;
-      top: 40vh;
-      left: 90vw;
-      animation-duration: 9s;
-    }
-    &--5 {
-      width: 80px;
-      animation-name: keyframes--5, rotate;
-      top: 70vh;
-      left: 50vw;
-      animation-duration: 14s;
-    }
-    &--6 {
-      width: 110px;
-      animation-name: keyframes--6, rotate;
-      top: 80vh;
-      left: 80vw;
-      animation-duration: 8s;
-    }
+    animation-name: rain;
+    top: -20vh;
+    // animation-duration: 6s;
+    // animation-delay: 1s;
   }
-  @keyframes rotate {
+  @keyframes rain {
     0% {
-      transform: rotate(0);
+      transform: translate(0, 0) rotate(0);
     }
     50% {
-      transform: rotate(180deg);
+      transform: translate(-10vw, 60vh) rotate(180deg);
     }
     100% {
-      transform: rotate(360deg);
+      transform: translate(-20vw, 120vh) rotate(360deg);
     }
   }
 }

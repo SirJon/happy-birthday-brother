@@ -38,3 +38,7 @@ export const isHB = () => {
   const hbDate = new Date(todayYear, HB_DATA.month, HB_DATA.date, 0, 0, 0, 0);
   return hbDate.valueOf() - today.valueOf() === 0;
 };
+
+export const getRandomNumber = (min: number, max: number) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
