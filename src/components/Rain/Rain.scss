@@ -11,10 +11,17 @@
     position: absolute;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-name: rain;
     top: -20vh;
   }
-  @keyframes rain {
+  .animation {
+    &--1 {
+      animation-name: rain1;
+    }
+    &--2 {
+      animation-name: rain2;
+    }
+  }
+  @keyframes rain1 {
     0% {
       transform: translate(0, 0) rotate(0);
     }
@@ -23,6 +30,17 @@
     }
     100% {
       transform: translate(-20vw, 120vh) rotate(360deg);
+    }
+  }
+  @keyframes rain2 {
+    0% {
+      transform: translate(0, 0) rotate(0);
+    }
+    50% {
+      transform: translate(-8vw, 60vh) rotate(200deg);
+    }
+    100% {
+      transform: translate(-16vw, 120vh) rotate(400deg);
     }
   }
 }

@@ -14,12 +14,14 @@ const Rain = () => {
       {new Array(50).fill(null).map((_it, i) => {
         const left = getRandomNumber(0, 120);
         const width = getRandomNumber(30, 70);
-        const animationDelay = getRandomNumber(1, 14);
-        const animationDuration = getRandomNumber(5, 10);
+        const animationDelay = getRandomNumber(1, 14) + Math.random();
+        const animationDuration = getRandomNumber(5, 10) + Math.random();
         const img = imgs[getRandomNumber(0, imgs.length - 1)];
+        const animationClass =
+          Math.random() > 0.5 ? "animation--1" : "animation--2";
         return (
           <img
-            className="img"
+            className={`img ${animationClass}`}
             key={i}
             src={img}
             style={{
